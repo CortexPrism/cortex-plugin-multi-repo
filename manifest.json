@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-multi-repo",
-  "version": "1.0.0",
-  "description": "Multi-Repo Change Orchestrator — Coordinate changes across repos: branches, API versions, cross-repo PRs, merge ordering",
+  "version": "1.0.1",
+  "description": "Multi-Repo Change Orchestrator \u2014 Coordinate changes across repos: branches, API versions, cross-repo PRs, merge ordering",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,14 +9,21 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-multi-repo",
   "homepage": "https://cortexprism.io/marketplace/plugins/multi-repo",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "multirepo_create_branches",
       "description": "Create branches across repos",
       "params": []
     },
-    { "name": "multirepo_track_prs", "description": "Track cross-repository PRs", "params": [] },
+    {
+      "name": "multirepo_track_prs",
+      "description": "Track cross-repository PRs",
+      "params": []
+    },
     {
       "name": "multirepo_plan_merge",
       "description": "Plan merge order to avoid breakage",
@@ -29,6 +36,13 @@
     }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
